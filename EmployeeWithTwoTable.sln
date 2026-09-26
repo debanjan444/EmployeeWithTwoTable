@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeWithTwoTable", "Emp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entitites", "Entitites\Entitites.csproj", "{F7CB9ACF-55BB-4EA2-BDC6-7E6A678B6940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{5E00916F-6A9F-4ECA-90F9-8A23C7A80FAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F7CB9ACF-55BB-4EA2-BDC6-7E6A678B6940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7CB9ACF-55BB-4EA2-BDC6-7E6A678B6940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7CB9ACF-55BB-4EA2-BDC6-7E6A678B6940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E00916F-6A9F-4ECA-90F9-8A23C7A80FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E00916F-6A9F-4ECA-90F9-8A23C7A80FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E00916F-6A9F-4ECA-90F9-8A23C7A80FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E00916F-6A9F-4ECA-90F9-8A23C7A80FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
