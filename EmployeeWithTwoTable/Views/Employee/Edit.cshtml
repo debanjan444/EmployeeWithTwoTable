@@ -1,0 +1,70 @@
+﻿@model ServiceContracts.DTO.EmployeeUpdateRequest
+
+<h1>Edit Employee</h1>
+
+<form asp-controller="Employee" asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="EmployeeId" />
+
+    <div>
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email"></label>
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Salary"></label>
+        <input type="number" asp-for="Salary" />
+        <span asp-validation-for="Salary"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="JoiningDate"></label>
+        <input type="date" asp-for="JoiningDate" />
+        <span asp-validation-for="JoiningDate"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="DepartmentId"></label>
+
+        <select asp-for="DepartmentId" asp-items="ViewBag.Departments">
+            <option value="">-- Select Department --</option>
+        </select>
+
+        <span asp-validation-for="DepartmentId"></span>
+    </div>
+
+    <br />
+
+    <button type="submit">Update Employee</button>
+
+</form>
+
+<br />
+
+<a asp-controller="Employee" asp-action="Index">
+    Back to Employee List
+</a>
+@section scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-test="window.jQuery" asp-fallback-src="~/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" asp-fallback-test="window.jQuery.validator" asp-fallback-src="~/jquery.validate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" asp-fallback-test="window.jQuery.validator.unobstrusive" asp-fallback-src="~/jquery.validate.unobtrusive.min.js"></script>
+}
+
