@@ -1,0 +1,13 @@
+﻿
+
+@model List<EmployeeResponse>
+<h1>This is coming from the index view</h1>
+@foreach(var employee in Model)
+{
+    <div>
+        <h2>@employee.Name</h2>
+        <p>Email: @employee.Email</p>
+        <p>Salary: @employee.Salary</p>
+        <p>Department: @employee.DepartmentName</p>
+    </div>
+}

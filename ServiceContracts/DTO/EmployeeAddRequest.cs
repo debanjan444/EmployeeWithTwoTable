@@ -10,18 +10,19 @@ namespace ServiceContracts.DTO
 {
     public class EmployeeAddRequest
     {
-        [Required]
+        [Required(ErrorMessage ="Name can not be empty")]
         
         public string? Name { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Email can not be empty")]
        
         [EmailAddress]
+
         public string? Email { get; set; }
-        [Required]
+        [Required(ErrorMessage = "salary can not be empty")]
         public int? Salary { get; set; }
-        [Required]
+        [Required(ErrorMessage = "joining date can not be empty")]
         public DateTime? JoiningDate { get; set; }
-        [Required]
+        [Required(ErrorMessage = "dept can not be empty")]
         public int? DepartmentId { get; set; }
 
         public Employee ToEmployee()
