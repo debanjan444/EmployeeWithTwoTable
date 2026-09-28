@@ -115,6 +115,30 @@ namespace EmployeeWithTwoTable.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Route("[action]/{employeeId}")]
+        public async Task<IActionResult> Delete(int employeeId)
+        {
+            EmployeeResponse? employeeResponse = await _employeeService.GetEmployeeById(employeeId);
+            if (employeeResponse == null)
+            {
+                return NotFound();
+            }
+            return View(employeeResponse);
+        }
+
+        [HttpPost]
+        [Route("[action]/{employeeId}")]
+        public async Task<IActionResult> Delete(int employeeId, IFormCollection form)
+        {
+            bool isDeleted = await _employeeService.DeleteEmployee(employeeId);
+            if (!isDeleted)
+            {
+                return NotFound();
+            }
+            return RedirectToAction("Index");
+        }
+
 
         }
     }
